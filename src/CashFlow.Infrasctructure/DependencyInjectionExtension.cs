@@ -16,12 +16,14 @@ public static class DependencyInjectionExtension
         AddRepositories(services);
     }
 
+    // Adicionando os Repositorios de Salvar e Adicionar
     private static void AddRepositories(IServiceCollection services)
     {
         services.AddScoped<IUnityOfWork, UnityOfWork>();
         services.AddScoped<IExpensesRepository, ExpensesRepository>();
     }
 
+    // Adicionando caminho para o Banco de Dados
     private static void AddDbContext(IServiceCollection services, IConfiguration configuration)
     {
         var conectionString = configuration.GetConnectionString("Connection");
