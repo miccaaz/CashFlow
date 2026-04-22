@@ -27,6 +27,6 @@ public static class DependencyInjectionExtension
     private static void AddDbContext(IServiceCollection services, IConfiguration configuration)
     {
         var conectionString = configuration.GetConnectionString("Connection");
-        services.AddDbContext<CashFlowDbContext>(config => config.UseNpgsql(conectionString));
+        services.AddDbContext<CashFlowDbContext>(config => config.UseNpgsql(conectionString));      
     }
 }
