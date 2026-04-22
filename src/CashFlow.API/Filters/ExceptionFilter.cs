@@ -39,7 +39,7 @@ public class ExceptionFilter : IExceptionFilter
             context.Result = new BadRequestObjectResult(errorResponse);
         }
     }
-
+	
     private void ThrowUnknowError(ExceptionContext context)
     {
         var errorResponse = new ResponseErrorJson(ResourceErrorMessages.UNKNOW_ERROR);
